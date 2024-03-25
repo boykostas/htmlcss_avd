@@ -1,0 +1,45 @@
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin center() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+%font-normal {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+// стили для текста 
+
+.color-text {
+    color: $colorText;
+}
+
+.nav {
+    display: flex;
+    gap: $gapGrid;
+    &__link {
+        text-decoration: none;
+        @extend %font-normal;
+    }
+}
+
+.content {
+    width: $widthSite;
+    display: flex;
+    gap: $gapGrid;
+    @include center();
+    &__item {
+        width: $widthSite / 4;
+        border: $border;
+        height: 200px;
+    }
+}
