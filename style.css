@@ -3,9 +3,102 @@
   padding: 0;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 .nav__link {
   font-family: sans-serif;
   font-weight: normal;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+.top {
+  overflow: hidden;
+}
+
+#check {
+  position: absolute;
+  left: -9999999px;
+  visibility: hidden;
+}
+
+#check:checked ~ .menu {
+  right: -232px;
+}
+
+.header {
+  position: relative;
+  height: 75px;
+  background: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promo {
+  height: 764px;
+  background: #F1E4E6;
+}
+
+img {
+  height: 60px;
+}
+
+.menu {
+  width: 232px;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  padding: 32px;
+  box-sizing: border-box;
+  transition: right 0.3s;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.menu__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.menu__subheading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.menu__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
+.menu__link:hover {
+  color: #F16D7F;
+  cursor: pointer;
 }
 
 .color-text {
@@ -24,13 +117,39 @@
   width: 1200px;
   display: flex;
   gap: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 .content__item {
   width: 300px;
   border: 1px solid black;
   height: 200px;
+}
+
+summary {
+  display: block;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.sort {
+  display: flex;
+  gap: 28px;
+}
+
+.details {
+  position: relative;
+}
+.details__box {
+  position: absolute;
+  left: -9px;
+  top: 22px;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding: 7px 9px 11px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }/*# sourceMappingURL=style.css.map */
