@@ -1,0 +1,192 @@
+$colorText: #222;
+$colorSelect: EF5B70;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.title {
+    border: 20px solid;
+    padding: 20px;
+    font-family: "merriweatherregular";
+    border-image: url(img/border.png) 30 round round;
+}
+
+.text {
+    font-family: "open_sansitalic";
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.heading {
+    color: transparent;
+    font-size: 56px;
+    -webkit-text-stroke: 1px blue;
+}
+
+.box {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 0 60px 120px;
+    border-color: transparent transparent transparent #4f46e5;
+}
+
+.breadcrumb {
+    background: #F8F3F4;
+    height: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #F16D7F;
+    }
+    &__links {
+        display: flex;
+    }
+    &__link {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: #636363;
+        &:hover {
+            color: #F16D7F;
+            cursor: pointer;
+        }
+    }
+    &__box:last-of-type .breadcrumb__link {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #F16D7F;
+    }
+    &__box:not(:last-child)::after {
+        content: '/';
+        padding-left: 8px;
+        padding-right: 8px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: #636363;
+    }
+}
+
+.cart {
+    padding-top: 96px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.cart-item {
+    display: flex;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorText;
+        width: 262px;
+        display: block;
+        margin-bottom: 42px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 22px;
+        right: 28px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    &__content {
+        position: relative;
+        background-color: #fff;
+        padding: 22px 32px;
+        box-sizing: border-box;
+    }
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        color: #575757;
+        &_select {
+            color: $colorText;
+        }
+        &_quantity {
+            display: flex;
+            gap: 32px;
+        }
+    }
+    &__number {
+        width: 44px;
+        height: 25px;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #656565;
+        text-align: center;
+        border: 1px solid #EAEAEA;
+    }
+    &__heading {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $colorText;
+    }
+    &__input {
+        width: 360px;
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: $colorText;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+    &__button {
+        border: 1px solid #A4A4A4;
+        padding: 12px 16px;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #A4A4A4;
+    }
+}
