@@ -96,15 +96,59 @@ a {
 
 .cart {
     padding-top: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     &__content {
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    &__heading {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $colorText;
+    }
+    &__input {
+        width: 360px;
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: $colorText;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+    &__button {
+        border: 1px solid #A4A4A4;
+        padding: 12px 16px;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #A4A4A4;
+        background-color: #fff;
+        width: 110px;
+        &:hover {
+            color: white;
+            background-color: #A4A4A4;
+        }
+    }
 }
 
 .cart-item {
     display: flex;
+    width: 652px;
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
     &__link {
         font-style: normal;
@@ -130,6 +174,7 @@ a {
         gap: 6px;
     }
     &__content {
+        width: 100%;
         position: relative;
         background-color: #fff;
         padding: 22px 32px;
@@ -160,33 +205,5 @@ a {
         color: #656565;
         text-align: center;
         border: 1px solid #EAEAEA;
-    }
-    &__heading {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 19px;
-        color: $colorText;
-    }
-    &__input {
-        width: 360px;
-        height: 45px;
-        border: 1px solid #A4A4A4;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 16px;
-        color: $colorText;
-        padding-left: 16px;
-        padding-right: 16px;
-        box-sizing: border-box;
-    }
-    &__button {
-        border: 1px solid #A4A4A4;
-        padding: 12px 16px;
-        font-weight: 300;
-        font-size: 11px;
-        line-height: 13px;
-        color: #A4A4A4;
     }
 }
