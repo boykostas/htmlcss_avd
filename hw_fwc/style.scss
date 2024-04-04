@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes bulb-light1 {
+    0% {
+        fill: transparent;
+    }
+    50% {
+        fill: yellow;
+    }
+    100% {
+        fill: transparent;
+    }
+}
+
+html {
+  counter-reset: light;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(img/back.png);
+  background-size: cover;
+  position: relative;
+}
+
+.bulb:checked {
+  counter-increment: light;
+}
+
+.bulb:checked ~ label {
+    display: none;
+}
+
+.bulb {
+  position: absolute;
+  left: -999999px;
+  visibility: hidden;
+}
+
+.box {
+  width: 35px;
+  position: absolute;
+}
+
+.light1 {
+    left: random(90) + vw;
+    top: random(90) + vh;
+    animation: bulb-light1 3s linear 0s;
+}
+
+.light2 {
+    left: random(90) + vw;
+    top: random(90) + vh;
+    animation: bulb-light1 3s linear 1.5s;
+}
+.light3 {
+    left: random(90) + vw;
+    top: random(90) + vh;
+    animation: bulb-light1 3s linear 3s;
+}
+
+.count {
+    position: absolute;
+    top: 24px;
+    right: 48px;
+}
+
+.count::after {
+  content: counter(light);
+  color: white;
+}
